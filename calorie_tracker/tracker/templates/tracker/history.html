@@ -1,0 +1,9 @@
+{% extends 'tracker/base.html' %}
+{% block content %}
+<h2>Calorie Intake History</h2>
+<ul>
+    {% for day in history %}
+        <li>{{ day.date }} - {{ day.total }} kcal</li>
+    {% endfor %}
+</ul>
+{% endblock %}

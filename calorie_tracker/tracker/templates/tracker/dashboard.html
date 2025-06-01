@@ -1,0 +1,22 @@
+{% extends 'tracker/base.html' %}
+{% block content %}
+<h2>Welcome, {{ user.username }}!</h2>
+<p>Daily Goal: {{ goal }} kcal</p>
+<p>Calories Consumed Today: {{ total_calories }} kcal</p>
+
+{% if goal_reached %}
+    <a href="{% url 'goal_reached' %}">🎉 See Message!</a>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="food_name" placeholder="Enter food item" required>
+    <button type="submit">Add</button>
+</form>
+
+<ul>
+    {% for item in consumed_items %}
+        <li>{{ item.name }} - {{ item.calories }} kcal</li>
+    {% endfor %}
+</ul>
+{% endblock %}
