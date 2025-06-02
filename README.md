@@ -10,8 +10,6 @@ A full-stack Django web application that helps users track their daily calorie i
 ## 📸 Screenshots
 
 <img src="screenshots/dashboard.png" alt="Dashboard Screenshot" width="600"/>
-<img src="screenshots/add-food.png" alt="Add Food Screenshot" width="600"/>
-<img src="screenshots/goal-reached.png" alt="Goal Reached Screenshot" width="600"/>
 
 ---
 
