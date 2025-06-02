@@ -9,7 +9,11 @@ A full-stack Django web application that helps users track their daily calorie i
 
 ## 📸 Screenshots
 
+<img src="calorie_tracker/screenshots/login.png" alt="Login Screenshot" width="600"/>
+<img src="calorie_tracker/screenshots/set_goal.png" alt="Set Goal Screenshot" width="600"/>
 <img src="calorie_tracker/screenshots/dashboard.png" alt="Dashboard Screenshot" width="600"/>
+<img src="calorie_tracker/screenshots/goal_reached.png" alt="Goal Reached Screenshot" width="600"/>
+
 
 ---
 
