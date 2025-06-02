@@ -25,7 +25,11 @@ SECRET_KEY = "django-insecure-bxwd0qp83+e5!@in)_ke9rlfawpur)@$q1iis744%q)3jey(62
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+import os
+if os.getenv("RENDER"):
+    DEBUG = False
 
 
 # Application definition
@@ -74,11 +78,9 @@ WSGI_APPLICATION = "calorie_tracker.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+import dj_database_url
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
 }
 
 

@@ -10,4 +10,6 @@ urlpatterns = [
     path('add-food/', views.add_food, name='add_food'),
     path('goal-reached/', views.goal_reached, name='goal_reached'),
     path('history/', views.history, name='history'),
+    path('reset-today/', views.reset_today, name='reset_today'),
+    path('reset-all/', views.reset_all_history, name='reset_all'),
 ]

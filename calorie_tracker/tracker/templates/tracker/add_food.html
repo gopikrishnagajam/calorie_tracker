@@ -3,7 +3,7 @@
 <h2>Add Custom Food</h2>
 <form method="post">
     {% csrf_token %}
-    <input type="text" name="name" placeholder="Food name" required>
+    <input type="text" name="name" placeholder="Food name" value="{{ prefill_name }}" required>
     <input type="number" name="calories" placeholder="Calories" required>
     <button type="submit">Add</button>
 </form>

@@ -1,8 +1,14 @@
 {% extends 'tracker/base.html' %}
 {% load static %}
-
 {% block content %}
-<h2>🎉 Congrats!</h2>
-<p>You've reached your calorie goal for the day!</p>
-<img src="{% static 'tummy_full.jpg' %}" alt="Funny Goal Message">
+<h2>🎯 Goal Achieved!</h2>
+<p>You've hit your calorie goal for today. Take a victory lap (or a nap)! 🎉</p>
+<img src="{% static 'tummy_full.jpg' %}" alt="Funny Goal Message" />
+
+<form method="post" action="{% url 'reset_today' %}" style="margin-top: 20px;">
+    {% csrf_token %}
+    <button type="submit" onclick="return confirm('Reset today\'s data?')">
+        🔄 Reset Today
+    </button>
+</form>
 {% endblock %}
